@@ -1,0 +1,69 @@
+{% if resume.experiences %}
+
+<section class="resume-section">
+
+    <h2 class="section-title">
+        Professional Experience
+    </h2>
+
+    <div class="section-content">
+
+        {% for experience in resume.experiences %}
+
+        <article class="experience-item">
+
+            <div class="experience-header">
+
+                <div class="experience-info">
+
+                    <h3 class="experience-position">
+                        {{ experience.position }}
+                    </h3>
+
+                    <p class="experience-company">
+                        {{ experience.company }}
+                    </p>
+
+                </div>
+
+                <div class="experience-duration">
+
+                    <span class="experience-date">
+
+                        {{ experience.start_date }}
+
+                        -
+
+                        {% if experience.currently_working %}
+                            Present
+                        {% else %}
+                            {{ experience.end_date }}
+                        {% endif %}
+
+                    </span>
+
+                </div>
+
+            </div>
+
+            {% if experience.description %}
+
+            <div class="experience-description">
+
+                <p>
+                    {{ experience.description }}
+                </p>
+
+            </div>
+
+            {% endif %}
+
+        </article>
+
+        {% endfor %}
+
+    </div>
+
+</section>
+
+{% endif %}

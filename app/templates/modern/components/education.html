@@ -1,0 +1,92 @@
+{% if resume.educations %}
+
+<section class="resume-section">
+
+    <h2 class="section-title">
+        Education
+    </h2>
+
+    <div class="section-content">
+
+        {% for education in resume.educations %}
+
+        <article class="education-item">
+
+            <div class="education-header">
+
+                <div class="education-info">
+
+                    <h3 class="education-degree">
+                        {{ education.degree }}
+                    </h3>
+
+                    <p class="education-institution">
+                        {{ education.institution }}
+                    </p>
+
+                </div>
+
+                <div class="education-duration">
+
+                    <span class="education-date">
+
+                        {{ education.start_date }}
+
+                        -
+
+                        {% if education.end_date %}
+                            {{ education.end_date }}
+                        {% else %}
+                            Present
+                        {% endif %}
+
+                    </span>
+
+                </div>
+
+            </div>
+
+            {% if education.field_of_study %}
+
+            <p class="education-field">
+
+                {{ education.field_of_study }}
+
+            </p>
+
+            {% endif %}
+
+            {% if education.grade %}
+
+            <p class="education-grade">
+
+                Grade:
+                {{ education.grade }}
+
+            </p>
+
+            {% endif %}
+
+            {% if education.description %}
+
+            <div class="education-description">
+
+                <p>
+
+                    {{ education.description }}
+
+                </p>
+
+            </div>
+
+            {% endif %}
+
+        </article>
+
+        {% endfor %}
+
+    </div>
+
+</section>
+
+{% endif %}

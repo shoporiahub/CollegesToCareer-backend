@@ -1,0 +1,118 @@
+{% if resume.skills %}
+
+<section class="resume-section">
+
+    <h2 class="section-title">
+        Skills
+    </h2>
+
+    <ul class="sidebar-list">
+
+        {% for skill in resume.skills %}
+
+        <li class="sidebar-item">
+            {{ skill.name }}
+        </li>
+
+        {% endfor %}
+
+    </ul>
+
+</section>
+
+{% endif %}
+
+
+{% if resume.languages %}
+
+<section class="resume-section">
+
+    <h2 class="section-title">
+        Languages
+    </h2>
+
+    <ul class="sidebar-list">
+
+        {% for language in resume.languages %}
+
+        <li class="sidebar-item">
+
+            {{ language.name }}
+
+            {% if language.proficiency %}
+                ({{ language.proficiency }})
+            {% endif %}
+
+        </li>
+
+        {% endfor %}
+
+    </ul>
+
+</section>
+
+{% endif %}
+
+
+{% if resume.certifications %}
+
+<section class="resume-section">
+
+    <h2 class="section-title">
+        Certifications
+    </h2>
+
+    <ul class="sidebar-list">
+
+        {% for certification in resume.certifications %}
+
+        <li class="sidebar-item">
+
+            <strong>
+                {{ certification.name }}
+            </strong>
+
+            {% if certification.issuer %}
+            <br>
+
+            <small>
+                {{ certification.issuer }}
+            </small>
+            {% endif %}
+
+        </li>
+
+        {% endfor %}
+
+    </ul>
+
+</section>
+
+{% endif %}
+
+
+{% if resume.achievements %}
+
+<section class="resume-section">
+
+    <h2 class="section-title">
+        Achievements
+    </h2>
+
+    <ul class="sidebar-list">
+
+        {% for achievement in resume.achievements %}
+
+        <li class="sidebar-item">
+
+            {{ achievement.title }}
+
+        </li>
+
+        {% endfor %}
+
+    </ul>
+
+</section>
+
+{% endif %}

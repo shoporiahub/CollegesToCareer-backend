@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block stylesheet %}
+
+<link
+    rel="stylesheet"
+    href="/static/css/modern.css"
+>
+
+{% endblock %}
+
+{% block title %}
+{{ resume.first_name }} {{ resume.last_name }} - Resume
+{% endblock %}
+
+{% block content %}
+
+<div class="resume">
+
+    {% include "modern/components/header.html" %}
+
+    <div class="resume-body">
+
+        <aside class="resume-sidebar">
+
+            {% include "modern/components/sidebar.html" %}
+
+        </aside>
+
+        <main class="resume-content">
+
+            {% include "modern/components/summary.html" %}
+
+            {% include "modern/components/experience.html" %}
+
+            {% include "modern/components/education.html" %}
+
+            {% include "modern/components/project.html" %}
+
+        </main>
+
+    </div>
+
+</div>
+
+{% endblock %}

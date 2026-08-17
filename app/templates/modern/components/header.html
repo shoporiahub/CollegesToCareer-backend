@@ -1,0 +1,78 @@
+<header class="resume-header">
+
+    <div class="header-left">
+
+        <h1 class="candidate-name">
+            {{ resume.first_name }}
+            {{ resume.last_name }}
+        </h1>
+
+        {% if resume.headline %}
+        <p class="candidate-headline">
+            {{ resume.headline }}
+        </p>
+        {% endif %}
+
+    </div>
+
+    <div class="header-right">
+
+        {% if resume.email %}
+        <p class="contact-item">
+            📧 {{ resume.email }}
+        </p>
+        {% endif %}
+
+        {% if resume.phone %}
+        <p class="contact-item">
+            📞 {{ resume.phone }}
+        </p>
+        {% endif %}
+
+        {% if resume.city or resume.state or resume.country %}
+        <p class="contact-item">
+
+            📍
+
+            {% if resume.city %}
+                {{ resume.city }}
+            {% endif %}
+
+            {% if resume.state %}
+                , {{ resume.state }}
+            {% endif %}
+
+            {% if resume.country %}
+                , {{ resume.country }}
+            {% endif %}
+
+        </p>
+        {% endif %}
+
+        {% if resume.linkedin_url %}
+        <p class="contact-item">
+            💼 {{ resume.linkedin_url }}
+        </p>
+        {% endif %}
+
+        {% if resume.github_url %}
+        <p class="contact-item">
+            🐙 {{ resume.github_url }}
+        </p>
+        {% endif %}
+
+        {% if resume.portfolio_url %}
+        <p class="contact-item">
+            🌐 {{ resume.portfolio_url }}
+        </p>
+        {% endif %}
+
+        {% if resume.website_url %}
+        <p class="contact-item">
+            🔗 {{ resume.website_url }}
+        </p>
+        {% endif %}
+
+    </div>
+
+</header>

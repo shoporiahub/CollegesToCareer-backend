@@ -1,0 +1,95 @@
+/* ==========================================
+   CSS Reset
+========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ==========================================
+   Root Variables
+========================================== */
+
+:root {
+
+    --primary: #2563eb;
+    --secondary: #1f2937;
+    --text: #374151;
+    --light-text: #6b7280;
+    --border: #e5e7eb;
+
+    --background: #f3f4f6;
+    --white: #ffffff;
+
+}
+
+/* ==========================================
+   Body
+========================================== */
+
+body {
+
+    background: var(--background);
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    color: var(--text);
+
+    padding: 40px;
+}
+
+/* ==========================================
+   Resume
+========================================== */
+
+.resume {
+
+    width: 210mm;
+
+    min-height: 297mm;
+
+    margin: auto;
+
+    background: var(--white);
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+}
+
+/* ==========================================
+   Resume Body
+========================================== */
+
+.resume-body {
+
+    display: flex;
+
+}
+
+/* ==========================================
+   Sidebar
+========================================== */
+
+.resume-sidebar {
+
+    width: 30%;
+
+    background: #f8fafc;
+
+    padding: 30px;
+
+}
+
+/* ==========================================
+   Content
+========================================== */
+
+.resume-content {
+
+    width: 70%;
+
+    padding: 30px;
+
+}
