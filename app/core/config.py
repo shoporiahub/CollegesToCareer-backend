@@ -19,6 +19,8 @@ class Settings(BaseSettings):
     CLOUDINARY_API_KEY: str
     CLOUDINARY_API_SECRET: str
 
+    OPENAI_API_KEY: str
+    
     model_config = SettingsConfigDict(
         env_file=".env",
         extra="ignore",
@@ -33,6 +35,7 @@ class Settings(BaseSettings):
             f"{self.DATABASE_HOST}:"
             f"{self.DATABASE_PORT}/"
             f"{self.DATABASE_NAME}"
+            f"?sslmode=require"
         )
 
 

@@ -24,6 +24,8 @@ from app.template.routes import router as template_router
 
 from app.routes.upload import router as upload_router
 
+from app.routes import ai
+
 from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI(
@@ -77,6 +79,8 @@ app.include_router(achievement_router)
 app.include_router(template_router)
 
 app.include_router(upload_router)
+
+app.include_router( ai.router)
 
 
 # Exception Handlers
