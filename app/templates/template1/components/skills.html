@@ -1,0 +1,23 @@
+<section class="template1-section">
+
+    <div class="template1-section-title">
+        Technical Skills
+    </div>
+
+    {% if resume.skills %}
+
+        <div class="template1-skills">
+
+            {% for skill in resume.skills %}
+
+                <div class="template1-skill">
+                    {{ skill.name }}
+                </div>
+
+            {% endfor %}
+
+        </div>
+
+    {% endif %}
+
+</section>

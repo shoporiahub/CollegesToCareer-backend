@@ -1,0 +1,82 @@
+<header class="template1-header">
+
+    <!-- Name -->
+
+    <h1 class="template1-name">
+        {{ resume.first_name }}
+        {{ resume.last_name }}
+    </h1>
+
+
+    <!-- Headline -->
+
+    {% if resume.headline %}
+
+        <h2 class="template1-headline">
+            {{ resume.headline }}
+        </h2>
+
+    {% endif %}
+
+
+    <!-- Contact Information -->
+
+    <div class="template1-contact">
+
+        {% if resume.address %}
+            <span>
+                {{ resume.address }}
+            </span>
+        {% endif %}
+
+        {% if resume.city %}
+            <span>
+                {{ resume.city }}
+            </span>
+        {% endif %}
+
+        {% if resume.state %}
+            <span>
+                {{ resume.state }}
+            </span>
+        {% endif %}
+
+        {% if resume.pincode %}
+            <span>
+                {{ resume.pincode }}
+            </span>
+        {% endif %}
+
+        {% if resume.email %}
+            <span>
+                {{ resume.email }}
+            </span>
+        {% endif %}
+
+        {% if resume.phone %}
+            <span>
+                {{ resume.phone }}
+            </span>
+        {% endif %}
+
+        {% if resume.website_url %}
+            <span>
+                {{ resume.website_url }}
+            </span>
+        {% endif %}
+
+        {% if resume.linkedin_url %}
+            <span>
+                {{ resume.linkedin_url }}
+            </span>
+        {% endif %}
+
+        {% if resume.github_url %}
+            <span>
+                {{ resume.github_url }}
+            </span>
+        {% endif %}
+
+    </div>
+
+</header>

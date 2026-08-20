@@ -4,7 +4,7 @@
 
 <link
     rel="stylesheet"
-    href="/static/css/modern.css"
+    href="/static/css/template1.css"
 >
 
 {% endblock %}
@@ -15,31 +15,42 @@
 
 {% block content %}
 
-<div class="resume">
+<div class="template1-resume">
 
-    {% include "modern/components/header.html" %}
+    <!-- Header -->
 
-    <div class="resume-body">
+    {% include "template1/components/header.html" %}
 
-        <aside class="resume-sidebar">
 
-            {% include "modern/components/sidebar.html" %}
+    <!-- Resume Content -->
 
-        </aside>
+    <main class="template1-content">
 
-        <main class="resume-content">
+        <!-- Summary -->
 
-            {% include "modern/components/summary.html" %}
+        {% include "template1/components/summary.html" %}
 
-            {% include "modern/components/experience.html" %}
 
-            {% include "modern/components/education.html" %}
+        <!-- Skills -->
 
-            {% include "modern/components/project.html" %}
+        {% include "template1/components/skills.html" %}
 
-        </main>
 
-    </div>
+        <!-- Experience -->
+
+        {% include "template1/components/experience.html" %}
+
+
+        <!-- Education -->
+
+        {% include "template1/components/education.html" %}
+
+
+        <!-- Additional Information -->
+
+        {% include "template1/components/additional.html" %}
+
+    </main>
 
 </div>
 

@@ -1,0 +1,410 @@
+/* =========================================================
+   TEMPLATE 1
+   Student Starter Resume
+   ========================================================= */
+
+
+/* =========================================================
+   PAGE
+   ========================================================= */
+
+.template1-resume {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 0 auto;
+    padding: 16mm 14mm;
+
+    background: #ffffff;
+    color: #292929;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 11px;
+    line-height: 1.45;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.template1-header {
+    margin-bottom: 18px;
+}
+
+.template1-name {
+    margin: 0;
+
+    font-size: 30px;
+    line-height: 1.05;
+    font-weight: 800;
+
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+
+    color: #222222;
+}
+
+.template1-headline {
+    margin: 7px 0 8px;
+
+    font-size: 15px;
+    line-height: 1.2;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+
+    color: #333333;
+}
+
+.template1-contact {
+    display: flex;
+    flex-wrap: wrap;
+
+    align-items: center;
+
+    gap: 4px 9px;
+
+    font-size: 9.5px;
+    line-height: 1.4;
+
+    color: #555555;
+}
+
+
+/* =========================================================
+   SECTIONS
+   ========================================================= */
+
+.template1-section {
+    margin-top: 14px;
+}
+
+.template1-section-title {
+    display: block;
+
+    margin-bottom: 8px;
+    padding: 5px 13px;
+
+    border-radius: 20px;
+
+    background: #d9d9d9;
+
+    color: #252525;
+
+    font-size: 11px;
+    line-height: 1.2;
+
+    font-weight: 700;
+    font-style: italic;
+
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+}
+
+
+/* =========================================================
+   SUMMARY
+   ========================================================= */
+
+.template1-summary {
+    margin: 0;
+
+    font-size: 10.5px;
+    line-height: 1.55;
+
+    color: #333333;
+}
+
+
+/* =========================================================
+   SKILLS
+   ========================================================= */
+
+.template1-skills {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    column-gap: 24px;
+    row-gap: 4px;
+}
+
+.template1-skill {
+    font-size: 10px;
+    line-height: 1.45;
+
+    color: #333333;
+}
+
+
+/* =========================================================
+   EXPERIENCE
+   ========================================================= */
+
+.template1-experience {
+    margin-bottom: 11px;
+
+    page-break-inside: avoid;
+    break-inside: avoid;
+}
+
+.template1-experience-header {
+    display: flex;
+
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+.template1-experience-title {
+    margin: 0;
+
+    font-size: 11px;
+    line-height: 1.35;
+
+    font-weight: 700;
+
+    color: #222222;
+}
+
+.template1-company {
+    margin: 2px 0 0;
+
+    font-size: 10px;
+    line-height: 1.35;
+
+    color: #555555;
+}
+
+.template1-experience-dates {
+    flex-shrink: 0;
+
+    white-space: nowrap;
+
+    font-size: 9.5px;
+    line-height: 1.35;
+
+    color: #555555;
+
+    text-align: right;
+}
+
+.template1-experience-description {
+    margin-top: 4px;
+
+    font-size: 10px;
+    line-height: 1.45;
+
+    color: #333333;
+
+    white-space: pre-line;
+}
+
+
+/* =========================================================
+   EDUCATION
+   ========================================================= */
+
+.template1-education {
+    margin-bottom: 10px;
+
+    page-break-inside: avoid;
+    break-inside: avoid;
+}
+
+.template1-education-header {
+    display: flex;
+
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+.template1-education-degree {
+    margin: 0;
+
+    font-size: 10.5px;
+    line-height: 1.35;
+
+    font-weight: 700;
+
+    color: #222222;
+}
+
+.template1-institution {
+    margin: 2px 0 0;
+
+    font-size: 10px;
+    line-height: 1.35;
+
+    color: #555555;
+}
+
+.template1-education-dates {
+    flex-shrink: 0;
+
+    white-space: nowrap;
+
+    font-size: 9.5px;
+    line-height: 1.35;
+
+    color: #555555;
+
+    text-align: right;
+}
+
+.template1-education-description {
+    margin: 4px 0 0;
+
+    font-size: 10px;
+    line-height: 1.45;
+
+    color: #333333;
+}
+
+
+/* =========================================================
+   ADDITIONAL INFORMATION
+   ========================================================= */
+
+.template1-additional-row {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 6px;
+
+    margin-bottom: 5px;
+
+    font-size: 10px;
+    line-height: 1.45;
+}
+
+.template1-additional-label {
+    flex-shrink: 0;
+
+    font-weight: 700;
+
+    color: #292929;
+}
+
+.template1-additional-value {
+    color: #444444;
+}
+
+
+/* =========================================================
+   PRINT / PDF
+   ========================================================= */
+
+@media print {
+
+    @page {
+        size: A4;
+        margin: 0;
+    }
+
+    html,
+    body {
+        width: 210mm;
+        min-height: 297mm;
+
+        margin: 0;
+        padding: 0;
+
+        background: #ffffff;
+    }
+
+    .template1-resume {
+        width: 210mm;
+        min-height: 297mm;
+
+        margin: 0;
+        padding: 16mm 14mm;
+
+        box-shadow: none;
+    }
+
+    .template1-section,
+    .template1-experience,
+    .template1-education {
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+
+}
+
+
+/* =========================================================
+   SCREEN PREVIEW
+   ========================================================= */
+
+@media screen {
+
+    .template1-resume {
+        box-shadow:
+            0 10px 35px rgba(15, 23, 42, 0.12);
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE PREVIEW
+   ========================================================= */
+
+@media screen and (max-width: 768px) {
+
+    .template1-resume {
+        width: 100%;
+        min-height: auto;
+
+        padding: 24px 20px;
+
+        box-shadow: none;
+    }
+
+    .template1-name {
+        font-size: 26px;
+    }
+
+    .template1-headline {
+        font-size: 13px;
+    }
+
+    .template1-skills {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        column-gap: 18px;
+    }
+
+    .template1-experience-header,
+    .template1-education-header {
+        flex-direction: column;
+
+        gap: 3px;
+    }
+
+    .template1-experience-dates,
+    .template1-education-dates {
+        text-align: left;
+    }
+
+    .template1-additional-row {
+        flex-direction: column;
+
+        gap: 1px;
+    }
+
+}

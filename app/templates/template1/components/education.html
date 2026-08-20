@@ -1,0 +1,69 @@
+<section class="template1-section">
+
+    <div class="template1-section-title">
+        Education
+    </div>
+
+    {% if resume.educations %}
+
+        {% for education in resume.educations %}
+
+            <article class="template1-education">
+
+                <div class="template1-education-header">
+
+                    <div>
+
+                        {% if education.degree %}
+                            <h3 class="template1-education-degree">
+                                {{ education.degree }}
+                            </h3>
+                        {% endif %}
+
+                        {% if education.institution %}
+                            <p class="template1-institution">
+                                {{ education.institution }}
+                            </p>
+                        {% endif %}
+
+                    </div>
+
+
+                    <div class="template1-education-dates">
+
+                        {% if education.start_date %}
+                            <span>
+                                {{ education.start_date }}
+                            </span>
+                        {% endif %}
+
+                        {% if education.start_date and education.end_date %}
+                            <span> - </span>
+                        {% endif %}
+
+                        {% if education.end_date %}
+                            <span>
+                                {{ education.end_date }}
+                            </span>
+                        {% endif %}
+
+                    </div>
+
+                </div>
+
+
+                {% if education.description %}
+
+                    <p class="template1-education-description">
+                        {{ education.description }}
+                    </p>
+
+                {% endif %}
+
+            </article>
+
+        {% endfor %}
+
+    {% endif %}
+
+</section>

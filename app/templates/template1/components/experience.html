@@ -1,0 +1,73 @@
+<section class="template1-section">
+
+    <div class="template1-section-title">
+        Professional Experience
+    </div>
+
+    {% if resume.experiences %}
+
+        {% for experience in resume.experiences %}
+
+            <article class="template1-experience">
+
+                <div class="template1-experience-header">
+
+                    <div>
+
+                        {% if experience.job_title %}
+                            <h3 class="template1-experience-title">
+                                {{ experience.job_title }}
+                            </h3>
+                        {% endif %}
+
+                        {% if experience.company %}
+                            <p class="template1-company">
+                                {{ experience.company }}
+                            </p>
+                        {% endif %}
+
+                    </div>
+
+
+                    <div class="template1-experience-dates">
+
+                        {% if experience.start_date %}
+                            <span>
+                                {{ experience.start_date }}
+                            </span>
+                        {% endif %}
+
+                        {% if experience.start_date and (experience.end_date or experience.is_current) %}
+                            <span> - </span>
+                        {% endif %}
+
+                        {% if experience.is_current %}
+                            <span>
+                                Present
+                            </span>
+                        {% elif experience.end_date %}
+                            <span>
+                                {{ experience.end_date }}
+                            </span>
+                        {% endif %}
+
+                    </div>
+
+                </div>
+
+
+                {% if experience.description %}
+
+                    <div class="template1-experience-description">
+                        {{ experience.description }}
+                    </div>
+
+                {% endif %}
+
+            </article>
+
+        {% endfor %}
+
+    {% endif %}
+
+</section>
